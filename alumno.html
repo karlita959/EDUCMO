@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mis grupos y tareas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header><strong>Mis grupos y tareas</strong>
+    <div><span id="usuario"></span> &nbsp; <button id="cerrar">Salir</button></div></header>
+  <main>
+    <div id="sin-grupos" class="card" style="display:none">
+      Aún no estás inscrito en ningún grupo. Pide a tu docente o a la administración que te den de alta.
+    </div>
+    <div id="grupos"></div>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script type="module" src="js/alumno.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panel del administrador</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header><strong>Panel del administrador</strong>
+    <div><span id="usuario"></span> &nbsp; <button id="cerrar">Salir</button></div></header>
+  <main>
+    <div class="card">
+      <h2>Docentes pendientes</h2>
+      <table><thead><tr><th>Nombre</th><th>Registro</th><th>Estado</th><th></th></tr></thead>
+        <tbody id="tabla-docentes"></tbody></table>
+    </div>
+    <div class="card">
+      <h2>Docentes aprobados</h2>
+      <table><thead><tr><th>Nombre</th><th></th></tr></thead>
+        <tbody id="tabla-aprobados"></tbody></table>
+    </div>
+    <div class="card">
+      <h2>Todos los usuarios</h2>
+      <table><thead><tr><th>Nombre</th><th>Rol</th><th>Aprobado</th><th>Alta</th></tr></thead>
+        <tbody id="tabla-usuarios"></tbody></table>
+    </div>
+    <div class="card">
+      <h2 id="titulo-form-alumno">Dar de alta un alumno en el catálogo</h2>
+      <form id="form-alumno" class="grid">
+        <input type="hidden" name="id" />
+        <label>Matrícula <input name="matricula" required /></label>
+        <label>Nombre completo <input name="nombre_completo" required /></label>
+        <label>Correo <input name="email" type="email" /></label>
+        <label>Carrera <input name="carrera" /></label>
+        <div>
+          <button class="primario" type="submit" id="btn-guardar-alumno">Guardar alumno</button>
+          <button class="secundario" type="button" id="btn-cancelar-alumno" style="display:none">Cancelar</button>
+        </div>
+      </form>
+      <p class="msg-ok" id="msg-alumno"></p>
+    </div>
+
+    <div class="card">
+      <h2>Catálogo de alumnos</h2>
+      <input id="buscar-alumno" placeholder="Buscar por matrícula o nombre" />
+      <table style="margin-top:12px"><thead><tr><th>Matrícula</th><th>Nombre</th><th>Carrera</th><th>Cuenta</th><th></th></tr></thead>
+        <tbody id="tabla-alumnos"></tbody></table>
+    </div>
+
+    <div class="card">
+      <h2>Minutas descargadas (últimas 50)</h2>
+      <table><thead><tr><th>Fecha</th><th>Archivo</th><th>Formato</th></tr></thead>
+        <tbody id="tabla-minutas"></tbody></table>
+    </div>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>
